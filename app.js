@@ -12,7 +12,12 @@ angular.module('flapperNews', [])
 			$scope.banana = "I'm a banana!";
 			$scope.addPost = function(){
 				if (!$scope.title || $scope.title ==='') {return}
-				$scope.posts.push({title: $scope.title, upvotes: 0});
+				$scope.posts.push({
+					title: $scope.title,
+					link: $scope.link,
+					upvotes: 0
+				});
+				$scope.title = '';
 				$scope.title = '';
 			};
 			$scope.incrementUpvotes = function(post) {
