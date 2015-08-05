@@ -10,4 +10,7 @@ angular.module('flapperNews', [])
 			{title: 'Post 5', upvotes: 15},
 			];
 			$scope.banana = "I'm a banana!";
+			$scope.addPost = function(){
+				$scope.posts.push({title: 'A new Post!', upvotes: 0});
+			};
 }]);
